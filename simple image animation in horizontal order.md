@@ -1,4 +1,4 @@
-Certainly! You can extend the previous example to include multiple images in a horizontal animation. Here's an example using three images:
+Certainly! To include multiple images in a horizontal animation. Here's an example using three images:
 
 ```html
 <!DOCTYPE html>
