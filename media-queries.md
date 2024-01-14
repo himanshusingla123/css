@@ -116,3 +116,33 @@ body {
 In this example, the font size adjusts based on the screen width, providing an optimal reading experience for different devices.
 
 Media queries are essential for creating responsive designs that adapt to the diversity of devices and screen sizes used by users today. They offer a powerful toolset for tailoring styles to specific conditions, ensuring a seamless user experience across various platforms.
+
+When you don't specify a media type in a media query, it defaults to the `all` media type. This means that the styles within the media query block will apply to all types of media, including screen, print, speech, etc. If you're primarily working on a web page for screens, specifying `screen` explicitly is common practice to ensure that the styles are applied only when viewed on screen devices.
+
+Here's an example with and without the `screen` media type:
+
+### Without specifying media type:
+
+```css
+/* Styles for screens smaller than 600 pixels */
+@media (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+```
+
+In this case, the styles inside the media query block will apply to all types of media, not just screens.
+
+### With specifying `screen` media type:
+
+```css
+/* Styles for screens smaller than 600 pixels */
+@media screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+```
+
+By including `screen`, you explicitly state that these styles are intended for screen devices. While this might not make a significant difference in many cases, it is considered good practice to be specific about the intended media type to avoid unintended consequences on other media types like print or speech. It also makes the code more readable and self-explanatory for developers who might be working on the project.
